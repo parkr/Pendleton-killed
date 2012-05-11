@@ -1,3 +1,4 @@
+# CakePHP
 /app/Config
 /app/tmp
 /lib/Cake/Console/Templates/skel/tmp/
@@ -8,3 +9,49 @@
 .DS_Store
 tags
 empty
+
+# TextMate
+*.tmproj
+*.tmproject
+tmtags
+
+# OS X
+.DS_Store
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Archives
+*.7z
+*.jar
+*.rar
+*.zip
+*.gz
+*.bzip
+*.xz
+*.lzma
+
+#packing-only formats
+*.iso
+*.tar
+
+#package management formats
+*.dmg
+*.xpi
+*.gem
+*.egg
+*.deb
+*.rpm
+
+# Sass
+*/.sass-cache/*
+
+# Project-Specific
+app/webroot/userphotos/*
+app/remote_pull.sh
+app/Migration/*.csv
+app/Migration/*.py
