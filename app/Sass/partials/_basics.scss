@@ -1,0 +1,11 @@
+a {
+	color: $linkColor;
+	text-decoration: $linkDecoration;
+	&:hover {
+		color: $linkHoverColor;
+		text-decoration: $linkHoverDecoration;
+	}
+	&:visited {
+		color: $linkVisitedColor;
+	}
+}
