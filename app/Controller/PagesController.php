@@ -30,27 +30,11 @@ App::uses('AppController', 'Controller');
  * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
  */
 class PagesController extends AppController {
-
-/**
- * Controller name
- *
- * @var string
- */
-	public $name = 'Pages';
-
-/**
- * Default helper
- *
- * @var array
- */
-	public $helpers = array('Html', 'Session');
-
-/**
- * This controller does not use a model
- *
- * @var array
- */
-	public $uses = array();
+	
+	
+	public function welcome() {
+		$this->layout = "empty";
+	}
 
 /**
  * Displays a view
@@ -79,4 +63,5 @@ class PagesController extends AppController {
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
 		$this->render(implode('/', $path));
 	}
+	
 }
