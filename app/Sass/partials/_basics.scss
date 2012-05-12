@@ -1,3 +1,10 @@
+@import "960/grid";
+body {
+	color: $textColor;
+	background-color: $backgroundColor;
+	font-family: $bodyTypefaceStack;
+}
+
 a {
 	color: $linkColor;
 	text-decoration: $linkDecoration;

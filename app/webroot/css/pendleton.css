@@ -5,7 +5,55 @@
  * Copyright 2012.
  * This code is written in SCSS, and compiled by Compass (using the Sass CLI) into valid CSS.
  */
+body {
+  color: white;
+  background-color: black;
+  font-family: "Thonburi", Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+a:hover {
+  color: white;
+  text-decoration: underline;
+}
+a:visited {
+  color: white;
+}
+
+nav {
+  text-align: center;
+}
 nav a {
   display: inline-block;
-  width: 12%;
+  width: 19.6%;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+#footer {
+  margin-top: 10px;
+  border-top: 2px white solid;
+  padding-top: 3px;
+}
+
+.images_group {
+  margin-bottom: 1em;
+  display: block;
+}
+
+.error {
+  color: red;
+}
+
+.cake-error {
+  display: block;
+  font-family: "Courier New", Courier, monospace;
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 940px;
 }

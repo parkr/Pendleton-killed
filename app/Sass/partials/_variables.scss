@@ -1,9 +1,11 @@
 // Variables for Pendleton Scholarship Collective website.
 
+$grey: #ddd;
+
 $textColor: #ffffff;
 $backgroundColor: #000000;
 
-$bodyTypeface: Helvetica;
+$bodyTypefaceStack: "Thonburi", Arial, Helvetica, sans-serif;
 
 $linkColor: #fff;
 $linkHoverColor: #fff;
@@ -11,3 +13,4 @@ $linkVisitedColor: #fff;
 $linkDecoration: none;
 $linkHoverDecoration: underline;
 
+$ninesixty-columns: 12;

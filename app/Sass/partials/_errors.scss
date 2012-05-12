@@ -1,0 +1,9 @@
+.error {
+	color: red;
+}
+
+.cake-error {
+	display: block;
+	font-family: "Courier New", Courier, monospace;
+	@include grid(12);
+}

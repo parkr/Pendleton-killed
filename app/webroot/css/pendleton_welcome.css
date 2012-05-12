@@ -5,6 +5,12 @@
  * Copyright 2012.
  * This code is written in SCSS, and compiled by Compass (using the Sass CLI) into valid CSS.
  */
+body {
+  color: white;
+  background-color: black;
+  font-family: "Thonburi", Arial, Helvetica, sans-serif;
+}
+
 a {
   color: white;
   text-decoration: none;

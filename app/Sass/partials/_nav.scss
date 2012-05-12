@@ -1,6 +1,9 @@
 nav {
+	text-align: center;
 	a {
 		display: inline-block;
-		width: 12%;
+		width: (98%/5);
+		font-size: 2em;
+		text-transform: uppercase;
 	}
 }
