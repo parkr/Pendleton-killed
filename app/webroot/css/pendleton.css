@@ -27,10 +27,28 @@ nav {
   text-align: center;
 }
 nav a {
-  display: inline-block;
-  width: 19.6%;
   font-size: 2em;
   text-transform: uppercase;
+}
+nav a#home_a, nav a#press_a, nav a#contact_a {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 140px;
+}
+nav a#collections_a, nav a#evolution_a {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+}
+nav a#home_a {
+  margin-left: 0px;
+}
+nav a#contact_a {
+  margin-right: 0px;
 }
 
 #footer {

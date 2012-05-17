@@ -10,6 +10,9 @@
 		
 		echo $this->Html->css('grid');
 		echo $this->Html->css('pendleton');
+		
+		echo $this->Html->script('jquery-1.7.2.min');
+		echo $this->Html->script('get_collections');
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -21,16 +24,12 @@
 		<div id="header">
 			<div id="logo"></div>
 			<nav>
-				<?php echo $this->Html->link("Home", array('controller' => 'pages', 'action' => 'display', 'home')); ?>
-				<a href="<?php echo $this->Html->url(array('controller' => 'collections', 'action' => 'index')); ?>">Collections
-					<ul>
-						<li></li>
-					</ul>
-				</a>
-				<?php
-				echo $this->Html->link("Evolution", array('controller' => 'pages', 'action' => 'display', 'evolution'));
-				echo $this->Html->link("Press", array('controller' => 'pages', 'action' => 'display', 'press'));
-				echo $this->Html->link("Contact", array('controller' => 'pages', 'action' => 'display', 'contact'));
+				<?php 
+				echo $this->Html->link("Home", array('controller' => 'pages', 'action' => 'display', 'home'), array('id' => 'home_a'));
+				echo $this->Html->link("Collections", array('controller' => 'collections', 'action' => 'index'), array('id' => 'collections_a'));
+				echo $this->Html->link("Evolution", array('controller' => 'pages', 'action' => 'display', 'evolution'), array('id' => 'evolution_a'));
+				echo $this->Html->link("Press", array('controller' => 'news', 'action' => 'index'), array('id' => 'press_a'));
+				echo $this->Html->link("Contact", array('controller' => 'pages', 'action' => 'display', 'contact'), array('id' => 'contact_a'));
 				?>
 			</nav>
 		</div>

@@ -1,9 +1,15 @@
 nav {
 	text-align: center;
 	a {
-		display: inline-block;
-		width: (98%/5);
 		font-size: 2em;
 		text-transform: uppercase;
+		&#home_a, &#press_a, &#contact_a { 
+			@include grid(2); }
+		&#collections_a, &#evolution_a { 
+			@include grid(3); }
+		&#home_a {
+			margin-left: 0px; }
+		&#contact_a { 
+			margin-right: 0px; }
 	}
 }
