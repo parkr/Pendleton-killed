@@ -21,7 +21,7 @@
 				"success": function(data, textStatus, jqXHR){
 					console && console.log && console.log(data);
 					// Parse through list of collections and build <ul> that contains links to them all
-					var $collections_a = $("a#collections_a"), ul = document.createElement('ul'), li, a;
+					var $collections_a = $("#collections_a"), ul = document.createElement('ul'), li, a;
 					for(var i=0; i<data.length; i++){
 						a = document.createElement('a');
 						a.href = data[i]["Collection"]["url"];
@@ -53,7 +53,9 @@
 			<nav>
 				<?php 
 				echo $this->Html->link("Home", array('controller' => 'pages', 'action' => 'display', 'home'), array('id' => 'home_a'));
-				echo $this->Html->link("Collections", array('controller' => 'collections', 'action' => 'index'), array('id' => 'collections_a'));
+				echo '<div id="collections_a">';
+				echo $this->Html->link("Collections", array('controller' => 'collections', 'action' => 'index'));
+				echo '</div><!--/#collections_a-->';
 				echo $this->Html->link("Evolution", array('controller' => 'pages', 'action' => 'display', 'evolution'), array('id' => 'evolution_a'));
 				echo $this->Html->link("Press", array('controller' => 'news', 'action' => 'index'), array('id' => 'press_a'));
 				echo $this->Html->link("Contact", array('controller' => 'pages', 'action' => 'display', 'contact'), array('id' => 'contact_a'));

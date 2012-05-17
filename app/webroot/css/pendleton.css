@@ -24,7 +24,14 @@ a:visited {
 }
 
 nav {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 940px;
   text-align: center;
+  border-bottom: white solid 2px;
+  margin: 0px 0px 20px 0px;
 }
 nav a {
   font-size: 2em;
@@ -37,7 +44,7 @@ nav a#home_a, nav a#press_a, nav a#contact_a {
   margin-right: 10px;
   width: 140px;
 }
-nav a#collections_a, nav a#evolution_a {
+nav a#evolution_a {
   display: inline;
   float: left;
   margin-left: 10px;
@@ -49,6 +56,64 @@ nav a#home_a {
 }
 nav a#contact_a {
   margin-right: 0px;
+}
+nav #collections_a {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+  border-top: solid 1px transparent;
+  border-left: solid 1px transparent;
+  border-right: solid 1px transparent;
+  width: 218px;
+}
+nav #collections_a > ul {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+  width: 218px;
+  list-style-type: disc;
+  text-align: left;
+  background-color: black;
+  margin: 0px 0px 0px -1px;
+  position: absolute;
+  left: -9999px;
+  display: block;
+  padding-bottom: 10px;
+  border-bottom: solid 1px white;
+  border-left: solid 1px white;
+  border-right: solid 1px white;
+}
+nav #collections_a > ul li {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+  font-size: 0.7em;
+  padding: 0px;
+  margin: 0px 0px 0px 50px;
+  float: none;
+}
+nav #collections_a > ul li a {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 220px;
+  margin: 0px 0px 0px 27px;
+}
+nav #collections_a:hover {
+  border-top: solid 1px white;
+  border-left: solid 1px white;
+  border-right: solid 1px white;
+}
+nav #collections_a:hover > ul {
+  position: absolute;
+  left: auto;
 }
 
 #footer {

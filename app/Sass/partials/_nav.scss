@@ -1,15 +1,65 @@
 nav {
+	@include grid(12);
 	text-align: center;
+	border-bottom: white solid 2px;
+	margin: 0px 0px 20px 0px;
 	a {
 		font-size: 2em;
 		text-transform: uppercase;
 		&#home_a, &#press_a, &#contact_a { 
 			@include grid(2); }
-		&#collections_a, &#evolution_a { 
+		&#evolution_a { 
 			@include grid(3); }
 		&#home_a {
 			margin-left: 0px; }
 		&#contact_a { 
 			margin-right: 0px; }
 	}
+	
+	$regularBorderStyle: solid 1px transparent;
+	$hoverBorderStyle: solid 1px white;
+	#collections_a {
+		@include grid(3);
+		border-top: $regularBorderStyle;
+		border-left: $regularBorderStyle;
+		border-right: $regularBorderStyle;
+		width: 218px; // 220px - 2 * $borderWidth; (220px = width of grid(3) in a 12-column 960 grid)
+		
+		& > ul {
+			@include grid(3);
+			width: 218px; // 220px - 2 * $borderWidth; (220px = width of grid(3) in a 12-column 960 grid)
+			list-style-type: disc;
+			text-align: left;
+			background-color: $backgroundColor;
+			margin: 0px 0px 0px -1px;
+			position: absolute;
+			left: -9999px;
+			display: block;
+			padding-bottom: 10px;
+			border-bottom: $hoverBorderStyle;
+			border-left: $hoverBorderStyle;
+			border-right: $hoverBorderStyle;
+			li {
+				@include grid(3);
+				font-size: 0.7em;
+				padding: 0px;
+				margin: 0px 0px 0px 50px;
+				float: none;
+				a {
+					@include grid(3);
+					margin: 0px 0px 0px 27px;
+				}
+			}
+		}
+		&:hover {
+			border-top: $hoverBorderStyle;
+			border-left: $hoverBorderStyle;
+			border-right: $hoverBorderStyle;
+			& > ul {
+				position: absolute;
+				left: auto;
+			}
+		}
+	}
+	
 }
