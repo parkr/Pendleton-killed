@@ -111,7 +111,6 @@ function getClassIfPageIs($page, $view){
 			</nav>
 		</div>
 		<div id="content">
-			<?php pr($this->request->params); ?>
 			<?php echo $this->Session->flash(); ?>
 			<?php echo $this->fetch('content'); ?>
 		</div>
