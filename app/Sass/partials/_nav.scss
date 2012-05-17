@@ -6,6 +6,10 @@ nav {
 	a {
 		font-size: 2em;
 		text-transform: uppercase;
+		&.current {
+			color: $linkHoverColor;
+			text-decoration: $linkHoverDecoration;
+		}
 		&#home_a, &#press_a, &#contact_a { 
 			@include grid(2); }
 		&#evolution_a { 

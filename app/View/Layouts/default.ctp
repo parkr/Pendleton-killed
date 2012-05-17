@@ -1,3 +1,36 @@
+<?php
+
+/**
+ * function getClassIfPageIs
+ * @param $page
+ */
+function getClassIfPageIs($page, $view){
+	$contr = $view->request->params['controller'];
+	$actn = $view->request->params['action'];
+	$pass = $view->request->params['pass'];
+	$isCurrent = false;
+	switch($page){
+		case "home":
+			$isCurrent = ($contr == "pages" && $actn = "display" && $pass[0] == "home");
+			break;
+		case "evolution":
+			$isCurrent = ($contr == "pages" && $actn = "display" && $pass[0] == "evolution");
+			break;
+		case "contact":
+			$isCurrent = ($contr == "pages" && $actn = "display" && $pass[0] == "contact");
+			break;
+		case "collections":
+			$isCurrent = ($contr == "collections");
+			break;
+		case "press":
+		case "news":
+			$isCurrent = ($contr == "news");
+			break;
+	}
+	return $isCurrent ? "current" : "";
+}
+	
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,17 +85,33 @@
 			<div id="logo"></div>
 			<nav>
 				<?php 
-				echo $this->Html->link("Home", array('controller' => 'pages', 'action' => 'display', 'home'), array('id' => 'home_a'));
+				echo $this->Html->link("Home", 
+						array('controller' => 'pages', 'action' => 'display', 'home'), 
+						array('id' => 'home_a', 'class' => getClassIfPageIs('home', $this))
+				);
 				echo '<div id="collections_a">';
-				echo $this->Html->link("Collections", array('controller' => 'collections', 'action' => 'index'));
+				echo $this->Html->link("Collections", 
+						array('controller' => 'collections', 'action' => 'index'),
+						array('class' => getClassIfPageIs('collections', $this))
+				);
 				echo '</div><!--/#collections_a-->';
-				echo $this->Html->link("Evolution", array('controller' => 'pages', 'action' => 'display', 'evolution'), array('id' => 'evolution_a'));
-				echo $this->Html->link("Press", array('controller' => 'news', 'action' => 'index'), array('id' => 'press_a'));
-				echo $this->Html->link("Contact", array('controller' => 'pages', 'action' => 'display', 'contact'), array('id' => 'contact_a'));
+				echo $this->Html->link("Evolution", 
+						array('controller' => 'pages', 'action' => 'display', 'evolution'), 
+						array('id' => 'evolution_a', 'class' => getClassIfPageIs('evolution', $this))
+				);
+				echo $this->Html->link("Press", 
+						array('controller' => 'news', 'action' => 'index'), 
+						array('id' => 'press_a', 'class' => getClassIfPageIs('press', $this))
+				);
+				echo $this->Html->link("Contact", 
+						array('controller' => 'pages', 'action' => 'display', 'contact'), 
+						array('id' => 'contact_a', 'class' => getClassIfPageIs('contact', $this))
+				);
 				?>
 			</nav>
 		</div>
 		<div id="content">
+			<?php pr($this->request->params); ?>
 			<?php echo $this->Session->flash(); ?>
 			<?php echo $this->fetch('content'); ?>
 		</div>
