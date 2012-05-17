@@ -1,0 +1,53 @@
+.threebythree {
+	@include grid(4);
+	margin-top: 10px;
+	margin-bottom: 10px;
+	vertical-align: top;
+	
+	$photo-side: 300px;
+	width: $photo-side;
+	max-height: $photo-side;
+	
+	a.link_to_item {
+		display: block;
+		opacity: 1;
+		position: relative;
+		top: -$photo-side;
+		left: 0px;
+		z-index: 100;
+		height: $photo-side;
+		width: $photo-side;
+		background-color: rgba(0, 0, 0, 0.4);
+		text-align: center;
+		.title {
+			position: relative;
+			top: 10px;
+			z-index: 101;
+			text-transform: uppercase;
+			font-size: 2em;
+			width: 270px;
+			text-align: center;
+			margin: auto auto auto auto;
+			vertical-align: middle;
+			color: #ddd;
+			text-shadow: #333 -1px -1px 0;
+		}
+	}
+	.image {
+		width: $photo-side;
+		height: $photo-side;
+		position: relative;
+		z-index: 10;
+		overflow: hidden;
+	}
+	img {
+		margin: 0 auto;
+		display: block;
+		&.portrait {
+			position: relative;
+			top: -50px;
+			left: -50px;
+			z-index: 5;
+		}
+	}
+}
