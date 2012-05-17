@@ -23,6 +23,30 @@ a:visited {
   color: white;
 }
 
+h1 {
+  text-transform: uppercase;
+}
+
+h2 {
+  text-transform: uppercase;
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+h4 {
+  text-transform: uppercase;
+}
+
+h5 {
+  text-transform: uppercase;
+}
+
+h6 {
+  text-transform: uppercase;
+}
+
 html {
   width: 100%;
   height: 100%;

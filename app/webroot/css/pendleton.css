@@ -24,27 +24,27 @@ a:visited {
 }
 
 h1 {
-  display: block;
+  text-transform: uppercase;
 }
 
 h2 {
-  display: block;
+  text-transform: uppercase;
 }
 
 h3 {
-  display: block;
+  text-transform: uppercase;
 }
 
 h4 {
-  display: block;
+  text-transform: uppercase;
 }
 
 h5 {
-  display: block;
+  text-transform: uppercase;
 }
 
 h6 {
-  display: block;
+  text-transform: uppercase;
 }
 
 nav {
