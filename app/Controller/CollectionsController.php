@@ -7,7 +7,6 @@ App::uses('AppController', 'Controller');
  */
 class CollectionsController extends AppController {
 
-
 /**
  * index method
  *
@@ -93,4 +92,29 @@ class CollectionsController extends AppController {
 		$this->Session->setFlash(__('Collection was not deleted'));
 		$this->redirect(array('action' => 'index'));
 	}
+	
+	
+/**
+ * listAll method
+ *
+ * @return displayField of all collections, as JSON.
+ */
+	public function listAll() {
+		if (!$this->request->is('get')) {
+			throw new MethodNotAllowedException();
+		}
+		$View = new View($this);
+		$Html = $View->loadHelper('Html');
+		$params = array(
+			'order' => 'Collection.year DESC',
+			'recursive' => 0,
+			'fields' => array($this->Collection->displayField)
+		);
+		$collections = $this->Collection->find('all', $params);
+		for($c=0; $c<count($collections); $c++){
+			$collections[$c]['Collection']['url'] = $Html->url(array('action' => 'view', $collections[$c]['Collection']['year']));
+		}
+		echo json_encode($collections);
+	}
+
 }

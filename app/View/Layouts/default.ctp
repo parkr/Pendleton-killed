@@ -12,8 +12,35 @@
 		echo $this->Html->css('pendleton');
 		
 		echo $this->Html->script('jquery-1.7.2.min');
-		echo $this->Html->script('get_collections');
-
+	?>
+	<script type="text/javascript" charset="utf-8">
+		$(function(){
+			$.ajax({
+				"url": "<?php echo $this->Html->url(array('controller' => 'collections', 'action' => 'listAll')); ?>",
+				"dataType": "json",
+				"success": function(data, textStatus, jqXHR){
+					console && console.log && console.log(data);
+					// Parse through list of collections and build <ul> that contains links to them all
+					var $collections_a = $("a#collections_a"), ul = document.createElement('ul'), li, a;
+					for(var i=0; i<data.length; i++){
+						a = document.createElement('a');
+						a.href = data[i]["Collection"]["url"];
+						a.textContent = data[i]["Collection"]["year"];
+						
+						li = document.createElement('li');
+						li.appendChild(a);
+						
+						ul.appendChild(li);
+					}
+					$collections_a.append(ul);
+				},
+				"error": function(jqXHR, textStatus, errorThrown){
+					console && console.warn && console.warn(jqXHR);
+				}
+			});
+		});
+	</script>
+	<?php
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
