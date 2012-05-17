@@ -9,6 +9,7 @@
 .DS_Store
 tags
 empty
+app/Test
 
 # TextMate
 *.tmproj
