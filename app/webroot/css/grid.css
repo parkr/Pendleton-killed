@@ -266,6 +266,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin-left: 10px;
   margin-right: 10px;
   width: 940px;
+  min-height: 60%;
 }
 
 /* 960 Grid System ~ Text CSS.

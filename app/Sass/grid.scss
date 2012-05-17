@@ -14,10 +14,14 @@
 // But most compass users prefer to construct semantic layouts like so (two column layout with header and footer):
 
 #container {
-  @include grid-container;
-  #header, #footer {
-    @include grid(12); }
-  #content {
-    @include grid(12); } }
+	@include grid-container;
+	#header, #footer {
+		@include grid(12);
+	}
+	#content {
+		@include grid(12);
+		min-height: 60%;
+	}
+}
 
 @import "partials/grid-text";
