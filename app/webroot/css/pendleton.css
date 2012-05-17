@@ -23,6 +23,30 @@ a:visited {
   color: white;
 }
 
+h1 {
+  display: block;
+}
+
+h2 {
+  display: block;
+}
+
+h3 {
+  display: block;
+}
+
+h4 {
+  display: block;
+}
+
+h5 {
+  display: block;
+}
+
+h6 {
+  display: block;
+}
+
 nav {
   display: inline;
   float: left;
@@ -36,6 +60,10 @@ nav {
 nav a {
   font-size: 2em;
   text-transform: uppercase;
+}
+nav a.current {
+  color: white;
+  text-decoration: underline;
 }
 nav a#home_a, nav a#press_a, nav a#contact_a {
   display: inline;
