@@ -45,6 +45,7 @@ function getClassIfPageIs($page, $view){
 		echo $this->Html->css('pendleton');
 		
 		echo $this->Html->script('jquery-1.7.2.min');
+		echo $this->Html->script('pendleton');
 	?>
 	<script type="text/javascript" charset="utf-8">
 		$(function(){
@@ -113,6 +114,7 @@ function getClassIfPageIs($page, $view){
 		<div id="content">
 			<?php echo $this->Session->flash(); ?>
 			<?php echo $this->fetch('content'); ?>
+			<?php $this->element('sql_dump'); ?>
 		</div>
 		<div id="footer">
 			&copy; 2012 Pendleton Scholarship Collection. Website designed by Becky Dugal, coded by <?php echo $this->Html->link("Parker Moore", "http://www.parkermoore.de/", array("target" => "_blank")); ?>.
