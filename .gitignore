@@ -56,3 +56,6 @@ app/webroot/userphotos/*
 app/remote_pull.sh
 app/Migration/*.csv
 app/Migration/*.py
+app/webroot/img/lookbook
+app/webroot/img/news
+app/webroot/img/thumb
