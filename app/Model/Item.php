@@ -63,7 +63,7 @@ class Item extends AppModel {
  *
  * @var array
  */
-	public $hasMany = array(
+	public $hasAndBelongsToMany = array(
 		'Photo' => array(
 			'className' => 'Photo',
 			'foreignKey' => 'item_id',
