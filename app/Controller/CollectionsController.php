@@ -36,6 +36,8 @@ class CollectionsController extends AppController {
 		if (!$this->Collection->exists()) {
 			throw new NotFoundException(__("Collection for $year has not been added."));
 		}
+		$this->set('collections', $this->Collection->find('all', array('order' => 'Collection.year DESC', 'fields' => array('Collection.id', 'Collection.year'))));
+		$this->Collection->recursive = 2;
 		$this->set('collection', $this->Collection->read(null, $collection['Collection']['id']));
 	}
 
